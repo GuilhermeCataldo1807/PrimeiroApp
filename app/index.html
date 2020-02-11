@@ -1,11 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conversor</title>
+    <Style>
+        @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro|Sriracha&display=swap');
+         body{
+             background-color: rgb(50, 125, 187);
+             font-family: 'Sriracha', cursive;
+         }
+         .conteiner{
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+             justify-content: center;
+         }
+    </Style>
+
+    <title>Converso</title>
 </head>
 <body>
-    <h1>Hello world</h1>
+     <div class="conteiner" aling="center">
+         <h3>Conversor de Polegadas para centimetros</h3>
+        <input type="text" name="polegadas" id="pol" placeholder="polegadas">
+        <h4 id="cm"></h4>
+        <button onclick="converter()">converter</button>
+     </div>
+<script type="text/javascript">
+    function converter(){
+        let pol = document.getElementById("pol").value;
+        let cm = document.getElementById("cm");
+        cm.innerHTML = pol * 2.5 + "cm";
+    }
+</script>
 </body>
 </html>
